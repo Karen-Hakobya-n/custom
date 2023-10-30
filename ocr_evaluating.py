@@ -2,7 +2,7 @@ import easyocr
 
 
 def easyocr_test(image_path, ground_truth_text):
-    reader = easyocr.Reader(['en'])
+    reader = easyocr.Reader(['en'], recog_network='english_g2')
 
     # Perform OCR on the image
     result = reader.readtext(image_path)
